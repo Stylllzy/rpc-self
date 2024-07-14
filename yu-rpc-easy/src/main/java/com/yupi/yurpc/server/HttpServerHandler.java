@@ -66,7 +66,7 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
 
             // 构造响应结果对象
             RpcResponse rpcResponse = new RpcResponse();
-            if (rpcResponse == null) {
+            if (rpcRequest == null) {
                 rpcResponse.setMessage("rpcRequest is null");
                 doResponse(request, rpcResponse, serializer);
                 return;
