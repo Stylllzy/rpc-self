@@ -2,6 +2,7 @@ package com.yupi.example.consumer;
 
 import com.yupi.example.common.model.User;
 import com.yupi.example.common.service.UserService;
+import com.yupi.yurpc.proxy.ServiceProxyFactory;
 
 /**
  * 简易服务消费者启动类，示例
@@ -11,9 +12,13 @@ public class EasyConsumerExample
 {
     public static void main( String[] args ) {
         System.out.println( "example-consumer 服务启动..." );
+
         // todo 需要获取 UserService 的实现类对象
+        // 动态代理
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
+
         // 静态代理
-        UserService userService = new UserServiceProxy();
+//        UserService userService = new UserServiceProxy();
 //        UserService userService = null;
 
         User user = new User();
