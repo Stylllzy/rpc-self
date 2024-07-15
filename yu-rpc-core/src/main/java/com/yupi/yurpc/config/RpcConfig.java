@@ -1,8 +1,11 @@
 package com.yupi.yurpc.config;
 
+import lombok.Data;
+
 /**
  * RPC 框架配置
  */
+@Data
 public class RpcConfig {
 
     /**

@@ -40,7 +40,7 @@ public class RpcApplication {
      * 获取配置
      * @return
      */
-    public static RpcConfig getConfig() {
+    public static RpcConfig getRpcConfig() {
         if (rpcConfig == null) {
             synchronized (RpcApplication.class) {
                 if (rpcConfig == null) {
